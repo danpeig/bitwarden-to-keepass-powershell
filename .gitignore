@@ -1,0 +1,6 @@
+venv/
+exports/
+Lib/
+Include/
+Scripts/
+pyvenv.cfg
