@@ -9,7 +9,7 @@ This code was derived from [bitwarden-to-keepass](https://github.com/davidnemec/
 
 ## Requirements
 - Microsoft Windows
-- [Python 3 for Windows](https://www.python.org/downloads/)
+- [Python 3 for Windows](https://www.python.org/downloads/) with PIP (Python Package Installer)
 - [Bitwarden CLI](https://github.com/bitwarden/clients/releases)
 
 ## Instructions

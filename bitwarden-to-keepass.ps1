@@ -40,7 +40,13 @@ if (!$DATABASE_PASSWORD) {
 $DATABASE_PASSWORD=Read-Host "`nPlease enter the password for KeePass DB: "}
 
 # Perform the backup
-py bitwarden-to-keepass.py --bw-session $BW_SESSION --database-path $DATABASE_PATH --database-password $DATABASE_PASSWORD --database-keyfile $DATABASE_KEYFILE --bw-path $BW_PATH
+if ($DATABASE_KEYFILE) {
+	py bitwarden-to-keepass.py --bw-session $BW_SESSION --database-path $DATABASE_PATH --database-password $DATABASE_PASSWORD --database-keyfile $DATABASE_KEYFILE --bw-path $BW_PATH
+}
+else {
+	py bitwarden-to-keepass.py --bw-session $BW_SESSION --database-path $DATABASE_PATH --database-password $DATABASE_PASSWORD --bw-path $BW_PATH
+}
+
 
 # Lock the vault
 Invoke-Expression "$BW_PATH lock"
