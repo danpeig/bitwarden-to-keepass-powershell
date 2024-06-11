@@ -12,6 +12,7 @@
 # Setup the virtual environment and install libraries
 py -m venv .
 Scripts\activate
+py -m pip install setuptools
 py -m pip install -r requirements.txt
 
 #-------------------------------------------------------------------------------------------------------------
