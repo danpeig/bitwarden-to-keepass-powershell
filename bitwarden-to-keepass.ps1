@@ -5,7 +5,7 @@
 
 # INSTRUCTIONS
 # 1. Install Python 3 for Windows
-# 2. Download the latest Bitwarden CLI executable and place in a sub-folder folder named: bitwardencli
+# 2. Download the latest Bitwarden CLI executable and place in the script root folder
 # 3. Optional: Edit the configuration below to set different hosts, key files or output folders
 # 4. Run this script, no admin rights required
 
@@ -17,11 +17,12 @@ py -m pip install -r requirements.txt
 
 #-------------------------------------------------------------------------------------------------------------
 # CONFIGURATION SECTION
-$BW_PATH="bitwardencli/bw.exe" #This is where the bitwarden CLI executable is
-$DATABASE_PATH="exports/"+(get-date -Format "yyyy-MM-dd_HHmmss")+"_bitwarden-export.kdbx" #This is the default name for the database
-#$DATABASE_PASSWORD = "secret-password" #If disabled (default), will prompt for a password at runtime
-#$DATABASE_KEYFILE="exports/my_keepass.key" # Optional key file
-#Invoke-Expression "$BW_PATH config server https://your.bw.domain.com" #Self-hosted vault
+$BW_PATH="./bw.exe" #This is where the bitwarden CLI executable is (defaults to the script root folder).
+$DEST_FOLDER="./exports" #Destination folder where the backups will be saved (defaults to the exports sub-folder in the script root folder).
+$DATABASE_PATH=$DEST_FOLDER+"/"+(get-date -Format "yyyy-MM-dd_HHmmss")+"_bitwarden-export.kdbx" #This is the default path and name for the database.
+#$DATABASE_PASSWORD = "secret-password" #If disabled (default), will prompt for a password at runtime.
+#$DATABASE_KEYFILE="exports/my_keepass.key" # Optional key file for the database.
+#Invoke-Expression "$BW_PATH config server https://your.bw.domain.com" #Self-hosted vault.
 #-------------------------------------------------------------------------------------------------------------
 
 # Check for the Bitwarden CLI
