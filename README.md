@@ -20,4 +20,4 @@ This code was derived from [bitwarden-to-keepass](https://github.com/davidnemec/
 - Run `bitwarden-to-keepass.ps1` and follow the instructions
 
 ## Support
-This tool uses the Python scripts from [bitwarden-to-keepass](https://github.com/davidnemec/bitwarden-to-keepass) without any modifications. If you have any problems with recent versions of Bitwarden, try grabing the latest versions of the *py* files from that repository.
+This tool uses the Python scripts from [bitwarden-to-keepass](https://github.com/davidnemec/bitwarden-to-keepass) without any modifications. If you have any problems with recent versions of Bitwarden, try grabing the latest versions of the files from that repository.
