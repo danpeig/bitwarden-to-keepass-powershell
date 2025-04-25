@@ -15,7 +15,7 @@ This code was derived from [bitwarden-to-keepass](https://github.com/davidnemec/
 ## Instructions
 - Clone this repository (or download all files)
 - Make sure you have Python 3 installed
-- Download [bitwarden-cli](https://bitwarden.com/help/article/cli/) and extract to the sub-folder `bitwardencli/bw.exe`.
+- Download [bitwarden-cli](https://bitwarden.com/help/article/cli/) and extract to the sub-folder `bitwardencli/bw.exe` (we could download automatically but it is not safe)
 - Optional: Edit `bitwarden-to-keepass.ps1` and confiugure paths, passwords and key-files
 - Run `bitwarden-to-keepass.ps1` and follow the instructions
 
