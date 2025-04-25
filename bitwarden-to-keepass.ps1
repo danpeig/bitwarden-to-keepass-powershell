@@ -33,7 +33,7 @@ if ( -Not (Test-Path $BW_PATH))
 #py -m pip install setuptools
 #py -m pip install -r requirements.txt
 pip install --no-cache-dir poetry
-poetry install
+& $env:appdata\Python\Scripts\poetry.exe install --no-root
 
 #Unlock and sync the bitwarden vault
 Invoke-Expression "$BW_PATH login"
